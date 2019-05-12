@@ -1,0 +1,18 @@
+type Me {
+  token: String
+  expirationDate: String
+  user: User
+}
+
+type User {
+  id: Int
+  name: String
+  email: String
+  role: UserRole
+  verified: Boolean
+}
+
+enum UserRole {
+  ADMIN
+  CLIENT
+}

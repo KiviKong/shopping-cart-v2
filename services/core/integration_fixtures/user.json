@@ -1,0 +1,17 @@
+[
+  {
+    "name": "_",
+    "email": "clienteNoRegiztrado@email.com",
+    "password": "12345678",
+    "role": "CLIENT",
+    "verified": false,
+    "id": -1
+  },
+  {
+    "name": "Valid Admin User",
+    "email": "admin@email.com",
+    "password": "12345678",
+    "role": "ADMIN",
+    "verified": true
+  }
+]
