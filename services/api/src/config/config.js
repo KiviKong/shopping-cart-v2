@@ -6,14 +6,14 @@ const config = {
   database: process.env.DB_NAME,
   host: process.env.DB_HOST,
   dialect: 'postgres',
-  logging: env === 'test',
+  logging: env === 'test' ? false : console.log,
   pool: {
     max: process.env.DB_MAX_CONNECTIONS || 100,
     min: 0,
     idle: process.env.DB_CONNECTION_IDLE || 100,
     evict: process.env.DB_CONNECTION_EVICT || 110
   },
-  seederStorage: 'sequelize',
+  seederStorage: 'sequelize'
 };
 
 module.exports = config;

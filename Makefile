@@ -41,7 +41,7 @@ dev:
 
 # Destroy dev environment
 dev-down:
-	@docker-compose $(DEV_COMPOSE) down
+	@docker-compose $(DEV_COMPOSE) down && docker volume prune
 
 # Logs
 logs:
