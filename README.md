@@ -31,13 +31,13 @@ sudo apt-get install jq
 ```
 
 ## Configuration
-aws-cli uses credentials to access into aws services, in this project you need access into aws secrets. You can create your own aws account and set your own credentials, but if you want it, I created those credentials.
+aws-cli uses credentials to access into aws services, in this project uses aws secrets. You need to set up your own credentials like this.
 
 * .aws/credentials
 ```
 [shopping-cart]
-aws_access_key_id = AKIASWQLYMM2N43QPC57
-aws_secret_access_key = +20zzMLSVhFMyYo3vRMjR5aojfCMVFpKMg9QAaGD
+aws_access_key_id = * access key *
+aws_secret_access_key = * secret key *
 ```
 
 * .aws/config
@@ -45,8 +45,6 @@ aws_secret_access_key = +20zzMLSVhFMyYo3vRMjR5aojfCMVFpKMg9QAaGD
 [profile shopping-cart]
 region = us-east-1
 ```
-
-### Important: those credentials has restricted access to the rest of aws services, in other words you can only read (not write) a very specific resource. Please don't trie to hack me, remember, this only has didactic purposes.
 ___
 
 ## How it works
