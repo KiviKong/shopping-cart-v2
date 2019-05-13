@@ -21,7 +21,7 @@ const verifyAndCreate = async function(email, password) {
       message: 'email or password doesn\'t match'
     };
 
-    return Promise.reject(err || error);
+    throw err || error;
   }
 };
 

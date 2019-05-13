@@ -18,10 +18,12 @@ const getUsers = async function(userId, email = false) {
   const user = await User.findOne(options);
 
   if (!user) {
-    return Promise.reject({
+    const error = {
       path: 'user',
       message: 'not found'
-    });
+    };
+
+    throw error;
   }
 
   return user;

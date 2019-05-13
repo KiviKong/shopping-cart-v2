@@ -8,10 +8,12 @@ const checkToken = async function(token) {
   });
 
   if (!session || new Date() >= session.expirationDate) {
-    return Promise.reject({
+    const error = {
       path: 'token',
       message: 'Token expired'
-    });
+    };
+
+    throw error;
   }
 
   session.expirationDate = await session.defineExpiration(session.role);
