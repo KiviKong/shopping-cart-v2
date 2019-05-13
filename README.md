@@ -31,7 +31,7 @@ sudo apt-get install jq
 ```
 
 ## Configuration
-aws-cli uses credentials to access into aws services, in this project uses aws secrets. You need to set up your own credentials like this.
+aws-cli uses credentials to access into aws services. this project uses aws secrets. You need to set up your own credentials like this.
 
 * .aws/credentials
 ```
