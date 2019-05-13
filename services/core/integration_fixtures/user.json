@@ -8,10 +8,17 @@
     "id": -1
   },
   {
-    "name": "Valid User Admin",
+    "name": "Valid Admin User",
     "email": "admin@email.com",
     "password": "12345678",
     "role": "ADMIN",
+    "verified": true
+  },
+  {
+    "name": "Valid CLient User",
+    "email": "client@email.com",
+    "password": "12345678",
+    "role": "CLIENT",
     "verified": true
   }
 ]

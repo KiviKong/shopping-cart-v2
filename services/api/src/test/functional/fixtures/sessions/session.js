@@ -5,7 +5,7 @@ const sessionFactory = require('../../factories/session');
 const FixturesHelper = require('../helpers/fixtures-helper');
 
 const adminUser = _.find(userFixtures, { email: 'admin@email.com' });
-const professionistUser = _.find(userFixtures, { email: 'professionist@email.com' });
+const clientUser = _.find(userFixtures, { email: 'client@email.com' });
 
 class SessionFixtures extends FixturesHelper {
   constructor() {
@@ -21,8 +21,8 @@ class SessionFixtures extends FixturesHelper {
     return sessionFactory.formatCredential(email, password);
   }
 
-  professionistCredentials() {
-    const { email, password } = professionistUser;
+  clientCredentials() {
+    const { email, password } = clientUser;
 
     return sessionFactory.formatCredential(email, password);
   }
