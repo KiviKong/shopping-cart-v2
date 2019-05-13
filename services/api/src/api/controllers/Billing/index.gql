@@ -1,0 +1,13 @@
+type ItemList {
+  code: String,
+  price: Float,
+  pieces: Int,
+  promotion: String
+}
+
+type Billing {
+  items: [ItemList]
+  total: Float
+  discount: Float
+  totalAfterDiscount: Float
+}

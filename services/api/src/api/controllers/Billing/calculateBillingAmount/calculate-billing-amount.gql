@@ -1,0 +1,12 @@
+input ItemInputList {
+  code: String!
+  pieces: Int!
+}
+
+input calculateBillingInput {
+  items: [ItemInputList]!
+}
+
+extend type Query {
+  calculateBillingAmount(input: calculateBillingInput!): Billing
+}

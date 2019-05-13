@@ -5,7 +5,7 @@ module.exports = async function(root, args, context) {
     where: {
       token: context.session.token
     },
-    include:[ {
+    include: [ {
       model: User,
       as: 'User'
     } ]
