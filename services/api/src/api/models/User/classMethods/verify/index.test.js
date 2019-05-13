@@ -2,7 +2,7 @@ const sinon = require('sinon');
 const sandbox = sinon.createSandbox();
 
 const bcrypt = require('bcryptjs');
-const { User } = require('../../../../models');
+const { User } = require(process.env.MODELS_PATH);
 const ErrorValidator = require('/var/lib/core/js/error-validator');
 const optionsModel = User.options;
 

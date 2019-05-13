@@ -6,21 +6,21 @@ const me = require('./');
 const ErrorValidator = require('/var/lib/core/js/error-validator');
 const errorValidator = new ErrorValidator(me);
 
-const { Session } = require('../../../models');
+const { Session } = require(process.env.MODELS_PATH);
 
 chai.should();
 chai.use(require('chai-as-promised'));
 
 describe('controllers/Session/me', () => {
   const {
-      context,
-      args,
-      sessionInstance,
-      response,
-      error,
-      findOneParams,
-      user
-    } = require('./fixtures');
+    context,
+    args,
+    sessionInstance,
+    response,
+    error,
+    findOneParams,
+    user
+  } = require('./fixtures');
 
   beforeEach(() => {
     sandbox.stub(Session, 'findOne').resolves(sessionInstance);

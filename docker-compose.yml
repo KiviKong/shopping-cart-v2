@@ -28,6 +28,10 @@ services:
       POSTGRES_PASSWORD: postgres
       DB_NAME: user
       DB_HOST: db
+      MODELS_PATH: /var/lib/app/api/models
+      CONTROLLERS_PATH: /var/lib/app/api/controllers
+      HELPERS_PATH: /var/lib/app/api/helpers
+      COMMON_FIXTURES_PATH: /var/lib/app/test/common/fixtures
     ports:
       - "3000:3000"
     labels:

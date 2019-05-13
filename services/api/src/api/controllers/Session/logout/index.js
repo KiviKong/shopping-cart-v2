@@ -1,4 +1,4 @@
-const { Session } = require('../../../models');
+const { Session } = require(process.env.MODELS_PATH);
 
 module.exports = async function(root, args, context) {
 

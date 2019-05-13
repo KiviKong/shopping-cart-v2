@@ -6,19 +6,19 @@ const logout = require('./');
 const ErrorValidator = require('/var/lib/core/js/error-validator');
 const errorValidator = new ErrorValidator(logout);
 
-const { Session } = require('../../../models');
+const { Session } = require(process.env.MODELS_PATH);
 
 chai.should();
 chai.use(require('chai-as-promised'));
 
 describe('controllers/Session/logout', () => {
   const {
-      context,
-      args,
-      destroyParams,
-      response,
-      error
-    } = require('./fixtures');
+    context,
+    args,
+    destroyParams,
+    response,
+    error
+  } = require('./fixtures');
 
   beforeEach(() => {
     sandbox.stub(Session, 'destroy').resolves();

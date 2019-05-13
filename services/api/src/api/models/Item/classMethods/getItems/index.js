@@ -1,5 +1,5 @@
 const getItems = async function(codes) {
-  const { Item, Promotion } = require('../../../../models');
+  const { Item, Promotion } = require(process.env.MODELS_PATH);
 
   const query = {
     where: {

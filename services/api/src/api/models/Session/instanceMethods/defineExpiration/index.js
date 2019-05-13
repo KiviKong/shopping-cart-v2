@@ -1,4 +1,4 @@
-const utils = require('../../../../helpers/utils');
+const utils = require(`${process.env.HELPERS_PATH}/utils`);
 const defineExpiration = async function(role) {
   const time = {
     ADMIN: 45,

@@ -1,5 +1,5 @@
 const verifyAndCreate = async function(email, password) {
-  const { Session, User } = require('../../../../models');
+  const { Session, User } = require(process.env.MODELS_PATH);
 
   try {
     const user = await User.verify(email, password);

@@ -6,7 +6,7 @@ const login = require('./');
 const ErrorValidator = require('/var/lib/core/js/error-validator');
 const errorValidator = new ErrorValidator(login);
 
-const { Session } = require('../../../models');
+const { Session } = require(process.env.MODELS_PATH);
 
 chai.should();
 chai.use(require('chai-as-promised'));

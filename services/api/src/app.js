@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const multer = require('multer');
-const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
 const useragent = require('express-useragent');
@@ -12,10 +11,6 @@ const schema = require('./api/controllers/');
 const errorHandler = require('./api/helpers/error');
 
 let server;
-
-process.env.MODELS_PATH = path.join(`${__dirname}/`, 'api/models');
-process.env.CONTROLLERS_PATH = path.join(`${__dirname}/`, 'api/controllers');
-process.env.HELPERS_PATH = path.join(`${__dirname}/`, 'api/helpers');
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');

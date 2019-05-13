@@ -1,8 +1,7 @@
-const { Item } = require('../../../models');
-const { promotionsLogic } = require('../../../helpers/utils');
+const { Item } = require(process.env.MODELS_PATH);
+const { promotionsLogic } = require(`${process.env.HELPERS_PATH}/utils`);
 
-module.exports = async function(root, { input }) {
-  const { items } = input;
+module.exports = async function(root, { input: { items } }) {
   const response = { items: [] };
   const pieces = {};
   const codes = [];

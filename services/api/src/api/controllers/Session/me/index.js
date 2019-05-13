@@ -1,4 +1,4 @@
-const { Session, User } = require('../../../models');
+const { Session, User } = require(process.env.MODELS_PATH);
 
 module.exports = async function(root, args, context) {
   const query = {

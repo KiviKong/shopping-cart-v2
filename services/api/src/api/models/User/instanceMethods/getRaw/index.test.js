@@ -1,4 +1,4 @@
-const { User } = require('../../../../models');
+const { User } = require(process.env.MODELS_PATH);
 const optionsModel = User.options;
 
 describe('models/User/instanceMethods getRaw', () => {

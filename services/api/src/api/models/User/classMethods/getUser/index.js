@@ -1,5 +1,5 @@
 const getUsers = async function(userId, email = false) {
-  const { User } = require('../../../../models');
+  const { User } = require(process.env.MODELS_PATH);
 
   let options = {
     where: {
@@ -16,7 +16,7 @@ const getUsers = async function(userId, email = false) {
   }
 
   const user = await User.findOne(options);
-  
+
   if (!user) {
     return Promise.reject({
       path: 'user',

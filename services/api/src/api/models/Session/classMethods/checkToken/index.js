@@ -1,5 +1,5 @@
 const checkToken = async function(token) {
-  const { Session } = require('../../../../models');
+  const { Session } = require(process.env.MODELS_PATH);
 
   const session = await Session.findOne({
     where: {
