@@ -1,4 +1,4 @@
-const getRaw = async function() {
+const getRaw = function() {
   const response = {
     id: this.id,
     name: this.name,

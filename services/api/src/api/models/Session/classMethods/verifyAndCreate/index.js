@@ -1,5 +1,5 @@
 const verifyAndCreate = async function(email, password) {
-  const { Session, User } = require('../../../../models');
+  const { Session, User } = require(process.env.MODELS_PATH);
 
   try {
     const user = await User.verify(email, password);
@@ -21,7 +21,7 @@ const verifyAndCreate = async function(email, password) {
       message: 'email or password doesn\'t match'
     };
 
-    return Promise.reject(err || error);
+    throw err || error;
   }
 };
 

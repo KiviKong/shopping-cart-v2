@@ -11,7 +11,7 @@ const codes = {
     'email or password doesn\'t match': 102,
     'Unauthorized role': 103,
     'Not verified': 423
-  },
+  }
 };
 
 module.exports = codes;

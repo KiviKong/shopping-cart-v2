@@ -29,7 +29,12 @@ class FormatHelper {
       return `${parameterName}: [],`;
     }
 
-    return `${parameterName}: ${JSON.stringify(values)},`;
+    let json = JSON.stringify(values);
+
+    json.replace(/\\"/g, '\uFFFF');
+    json = json.replace(/\"([^"]+)\":/g, '$1:').replace(/\uFFFF/g, '\\\"');
+
+    return `${parameterName}: ${json},`;
   }
 }
 

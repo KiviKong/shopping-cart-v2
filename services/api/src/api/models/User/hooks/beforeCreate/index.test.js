@@ -3,7 +3,7 @@ const sinon = require('sinon');
 const sandbox = sinon.createSandbox();
 
 const bcrypt = require('bcryptjs');
-const { User } = require('../../../../models');
+const { User } = require(process.env.MODELS_PATH);
 const optionsModel = User.options;
 
 chai.should();

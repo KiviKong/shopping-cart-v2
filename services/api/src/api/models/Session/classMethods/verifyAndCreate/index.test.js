@@ -1,14 +1,14 @@
 const sinon = require('sinon');
 const sandbox = sinon.createSandbox();
 
-const { Session, User } = require('../../../../models');
+const { Session, User } = require(process.env.MODELS_PATH);
 const ErrorValidator = require('/var/lib/core/js/error-validator');
 const optionsModel = Session.options;
 
 describe('models/Session/classMethods verifyAndCreate', () => {
   const { classMethods } = optionsModel;
   const fixtures = require('./fixtures');
-  const { email, password, verifyParams, userInstance, userNotVerified, createParams,
+  const { email, password, verifyParams, userInstance, createParams,
     sessionInstance, response, commonError, notVerifiedError, wrongDataError } = fixtures;
   const errorValidator = new ErrorValidator(classMethods.verifyAndCreate);
 

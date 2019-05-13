@@ -2,12 +2,13 @@ const sinon = require('sinon');
 const sandbox = sinon.createSandbox();
 
 const ErrorValidator = require('/var/lib/core/js/error-validator');
-const { Session } = require('../../../../models');
+const { Session } = require(process.env.MODELS_PATH);
 const optionsModel = Session.options;
 
 describe('models/Session/classMethods/checkToken', () => {
   const { classMethods } = optionsModel;
   const errorValidator = new ErrorValidator(classMethods.checkToken);
+
   const {
     token,
     findOneParams,
@@ -15,7 +16,7 @@ describe('models/Session/classMethods/checkToken', () => {
     invalidSession,
     commonError,
     expiredError
-  } = require('./fixtures');;
+  } = require('./fixtures');
 
   beforeEach(() => {
     sandbox.stub(Session, 'findOne').resolves(validSession);

@@ -1,6 +1,6 @@
-const { request, errors } = require('../../../../test/common/fixtures/');
+const { errors } = require(process.env.COMMON_FIXTURES_PATH);
 const sendError = errors.customError('Session');
-const { User } = require('../../../models');
+const { User } = require(process.env.MODELS_PATH);
 
 const expirationDate = new Date();
 const token = 'token';
@@ -31,7 +31,7 @@ module.exports = {
     where: {
       token: token
     },
-    include:[ {
+    include: [ {
       model: User,
       as: 'User'
     } ]

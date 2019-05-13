@@ -1,6 +1,7 @@
 const superagent = require('superagent-defaults')();
 const sessionFixtures = require('../fixtures/sessions/session');
 const sessionFactory = require('./factories/session');
+const billingFactory = require('./factories/billing');
 
 class Api {
   constructor(host = 'http://localhost:3000', prefix = '/api/') {
@@ -120,6 +121,12 @@ class Api {
     return this.login(credentials);
   }
 
+  clientLogin() {
+    const credentials = sessionFixtures.clientCredentials();
+
+    return this.login(credentials);
+  }
+
   professionistLogin() {
     const credentials = sessionFixtures.professionistCredentials();
 
@@ -156,6 +163,13 @@ class Api {
     const query = sessionFactory.me();
 
     return this.graphqlRequest(query);
+  }
+
+  calculateBillingAmount(params) {
+    const query = billingFactory.calculateBillingAmount(params);
+
+    return this.graphqlRequest(query)
+      .then(response => response);
   }
 }
 

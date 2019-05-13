@@ -1,6 +1,6 @@
 [
   {
-    "name": "_",
+    "name": "Not verified User",
     "email": "clienteNoRegiztrado@email.com",
     "password": "12345678",
     "role": "CLIENT",
@@ -12,6 +12,13 @@
     "email": "admin@email.com",
     "password": "12345678",
     "role": "ADMIN",
+    "verified": true
+  },
+  {
+    "name": "Valid CLient User",
+    "email": "client@email.com",
+    "password": "12345678",
+    "role": "CLIENT",
     "verified": true
   }
 ]

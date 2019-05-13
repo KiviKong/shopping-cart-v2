@@ -1,0 +1,3 @@
+services/core/integration_fixtures
+services/user/src/vendor/openpay.js
+services/api/src/api/schemas/api/common/phone-pattern.js

@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
+
 const verify = async function(email, password, userId) {
-  const { User } = require('../../../../models');
+  const { User } = require(process.env.MODELS_PATH);
   const query = {
     where: {
       email

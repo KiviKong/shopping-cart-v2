@@ -37,6 +37,7 @@ node_modules/
 jspm_packages/
 unit_coverage
 functional_coverage
+pgdata/
 
 # TypeScript v1 declaration files
 typings/

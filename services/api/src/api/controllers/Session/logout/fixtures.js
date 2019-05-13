@@ -1,4 +1,4 @@
-const { request, errors } = require('../../../../test/common/fixtures/');
+const { request, errors } = require(process.env.COMMON_FIXTURES_PATH);
 const { guid } = request;
 const sendError = errors.customError('Session');
 const token = 'token';
